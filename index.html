@@ -237,7 +237,7 @@ form button:hover {
 </style></head><body>
 <div class="wrapper">
 	<div class="container">
-		<h1>PTNKChat Admin</h1>
+		<h1>DKN Chat Admin</h1>
 		<h1 id="loading" style="display:none; font-size:28px">Please wait...</h1>
 		
 		<form class="form">
@@ -278,7 +278,7 @@ $("#login-button").click(function(event){
 			hash: CryptoJS.SHA256(time + "" + pwd).toString()
 		}
 		var token = CryptoJS.AES.encrypt(JSON.stringify(a), pwd).toString();
-		var host = 'ptnkchat.herokuapp.com';
+		var host = 'dknchat.herokuapp.com';
 		$.ajax({
 			url: 'https://' + host + '/admin/auth',
 			method: 'post',
